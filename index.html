@@ -92,6 +92,11 @@
     font-family: 'Cormorant Garamond', serif; font-size: 22px;
     color: var(--ink); margin-bottom: 14px; font-weight: 500;
   }
+  .q-hint {
+    font-family: 'Jost', sans-serif; font-size: 13px;
+    color: var(--ink-soft); margin-top: -8px; margin-bottom: 14px;
+    font-style: italic;
+  }
   .option {
     display: flex; align-items: center; gap: 11px;
     padding: 11px 15px; margin-bottom: 8px;
@@ -133,7 +138,7 @@
       <div class="by">by sophie</div>
     </div>
     <h1 class="title">Quelques infos pour démarrer ton projet</h1>
-    <p class="intro">Réponds quand tu as un moment, ça prend 2 min ! Ces infos m'aideront à travailler sur ce qui te correspond vraiment 😊</p>
+    <p class="intro">Réponds quand tu as un moment tranquille, pas d'urgence 🌿 Ces infos m'aideront à avancer sereinement sur ce qui te correspond vraiment 😊</p>
     <div class="divider"><span>❧</span></div>
   </header>
 
@@ -152,35 +157,48 @@
   // Numéro WhatsApp de destination (intégré, invisible pour la cliente)
   const DEST_PHONE = "32485977139";
 
-  const RAW = `Q: En priorité, qu'aimerais-tu que je fasse pour toi ?
-- Site internet
-- Flyer
-- Carte de visite
-- Fiche Google
-- Réseaux sociaux
-- Système de réservation
-- Autre
+  const RAW = `Q (texte): Le numéro de téléphone que tu veux afficher sur tes supports ?
 
-Q: Ton objectif principal ?
-- Me faire connaître
-- Remplir mon agenda
-- Avoir une image plus pro
-- Être trouvée sur Google
-- Vendre des bons cadeaux
-- Autre
+Q: Pour ton adresse mail pro ?
+- J'ai déjà une adresse mail pro
+- Je veux que tu m'en crées une dédiée
+- Je ne sais pas encore
 
-Q (texte): Ton adresse ou la zone où tu reçois tes clients ?
+Q (texte): Si tu as déjà une adresse mail pro, laquelle veux-tu utiliser ?
 
-Q: Qu'as-tu déjà de ton côté ?
-- Logo
-- Photos
-- Textes
-- Visuels
-- Page Facebook
-- Compte Instagram
-- Rien pour l'instant
+Q: As-tu déjà des réseaux sociaux pro ?
+- Oui, une page Facebook à mettre à jour
+- Oui, un compte Instagram à mettre à jour
+- Non, il faut tout créer
+- Tu peux les créer pour moi
 
-Q (texte): Un truc à ajouter ou une envie particulière ?`;
+Q (texte): L'adresse exacte à Sombreffe où tu reçois actuellement ?
+
+Q: Le nom « Harmonie des Sens » (vu qu'il est déjà très utilisé dans le bien-être)
+- On le garde tel quel
+- On le garde mais on le renforce (ville + spécialité)
+- Je suis ouverte à un nom plus unique à moi
+- J'aimerais qu'on en reparle
+
+Q: Es-tu déjà inscrite à la BCE (registre des entreprises) ?
+- Oui
+- Non, pas encore
+- Je ne sais pas
+
+Q (texte): Si oui, ton numéro d'entreprise ?
+
+Q (texte): As-tu un slogan ou une petite phrase qui te définit ?
+
+Q (texte): Une petite présentation de toi : ton parcours, pourquoi ce métier, ce qui te tient à cœur (quelques lignes, pour le flyer et tes réseaux)
+
+Q: Qu'as-tu déjà de ton côté à m'envoyer ?
+- Mon logo (fichier d'origine si possible)
+- Des photos de moi
+- Des photos de mon espace / matériel
+- Mes tarifs (déjà faits)
+- Rien d'autre pour l'instant
+
+Q (texte): Des choses que tu veux absolument mettre en avant, ou au contraire éviter ?`;
 
   let questions = [];
 
